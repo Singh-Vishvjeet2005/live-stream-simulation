@@ -1,0 +1,144 @@
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* VIDEO */
+.video-section {
+  flex: 70%;
+  position: relative;
+  background: black;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.live-badge {
+  background: red;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.live-badge span {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+#viewerCount {
+  background: rgba(0,0,0,0.6);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* BOTTOM BAR */
+.bottom-bar {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+#timer {
+  background: rgba(0,0,0,0.6);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* CHAT */
+.chat-section {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  border-left: 1px solid #333;
+}
+
+.chat-header {
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-box p {
+  background: #1f1f1f;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 6px 0;
+}
+
+/* INPUT */
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+  border-radius: 6px;
+}
+
+.chat-input-area button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+  .container {
+    flex-direction: column;
+  }
+
+  .video-section {
+    height: 50%;
+  }
+
+  .chat-section {
+    height: 50%;
+  }
+}
