@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- VIDEO -->
+  <div class="video-section">
+
+    <div class="top-bar">
+      <div class="live-badge"><span></span> LIVE</div>
+      <div id="viewerCount">👁 1,245 watching</div>
+    </div>
+
+    <video autoplay  loop playsinline controls>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="bottom-bar">
+      <div id="timer">Streaming Now • 00:00</div>
+    </div>
+
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat-section">
+    <div class="chat-header">💬 Live Chat</div>
+    <div id="chatBox" class="chat-box"></div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Say something...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
